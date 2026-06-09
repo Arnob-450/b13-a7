@@ -1,3 +1,6 @@
+import { CiClock2 } from "react-icons/ci";
+import { GoGraph } from "react-icons/go";
+import { RiHome2Line } from "react-icons/ri";
 import { NavLink } from "react-router";
 
 
@@ -10,9 +13,10 @@ const Navbar = () => {
                 </div>
                 <div className="">
                     <ul className="flex">
-                        <li><NavLink className={({ isActive }) => `btn btn-ghost text-[#64748B]  ${isActive ? 'text-white btn-active bg-[#244D3F] ' : ''}`} to={'/'}>Home</NavLink></li>
-                        <li><NavLink className={({ isActive }) => `btn btn-ghost text-[#64748B] ${isActive ? 'text-white btn-active bg-[#244D3F] ' : ''}`} to={'/books'}>Timeline</NavLink></li>
-                        <li><NavLink className={({ isActive }) => `btn btn-ghost text-[#64748B]  ${isActive ? 'text-white btn-active bg-[#244D3F] ' : ''}`} to={'/page-to-read'}>Stats</NavLink></li>
+                        <li><NavLink className={({ isActive }) => `btn btn-ghost text-[#64748B]  ${isActive ? 'text-white btn-active bg-[#244D3F] ' : ''}`} to={'/'}> <RiHome2Line />Home</NavLink></li>
+                        <li><NavLink className={({ isActive }) => `btn btn-ghost text-[#64748B] ${isActive ? 'text-white btn-active bg-[#244D3F] ' : ''}`} to={'/books'}><CiClock2 /> Timeline</NavLink></li>
+                        <li><NavLink className={({ isActive }) => `btn btn-ghost text-[#64748B]  ${isActive ? 'text-white btn-active bg-[#244D3F] ' : ''}`} to={'/page-to-read'}>
+                           <GoGraph /> Stats</NavLink></li>
                     </ul>
                 </div>
             </div>
