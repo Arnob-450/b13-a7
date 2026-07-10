@@ -1,9 +1,9 @@
 import { createBrowserRouter } from "react-router";
 import MainLayout from "../layout/MainLayout";
-import Books from "../pages/books/Books";
 import HomePage from "../pages/homepage/HomePage";
 import ErrorPage from "../pages/errorPage/ErrorPage";
 import FriendDetails from "../pages/friendDetails/FriendDetails";
+import Timeline from "../pages/timeline/Timeline";
 
  export const router = createBrowserRouter([
   {
@@ -15,8 +15,8 @@ import FriendDetails from "../pages/friendDetails/FriendDetails";
         element : <HomePage></HomePage>,
       },
       {
-        path : "/books",
-        element : <Books></Books>,
+        path : "/timeline",
+        element : <Timeline></Timeline>
       },
       {
         path : "/friendDetails/:id",

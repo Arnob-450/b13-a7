@@ -1,18 +1,26 @@
+
 import { FiArchive } from "react-icons/fi";
 import { HiOutlineBellSnooze } from "react-icons/hi2";
 import { IoCallOutline, IoVideocamOutline } from "react-icons/io5";
 import { LuMessageSquareMore } from "react-icons/lu";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { useLoaderData, useParams } from "react-router";
+import { TimeLineContext } from "../../context/TimeLineProvder";
+import { useContext } from "react";
 
 
 const FriendDetails = () => {
     const { id } = useParams();
-    console.log(id, "id");
+    // console.log(id, "id");
     const friends = useLoaderData();
-    console.log(friends, "friends");
+    // console.log(friends, "friends");
     const expectedFriend = friends.find(friend => friend.id === parseInt(id));
-    console.log(expectedFriend, "expectedFriend");
+    // console.log(expectedFriend, "expectedFriend");
+
+    const {handleTimeline } = useContext(TimeLineContext); 
+    // console.log(timeline);    
+   
+
     return (
         <div className="container mx-auto px-4 sm:px-6 lg:px-15 py-5 mt-5 sm:mt-10 lg:mt-15 mb-5 sm:mb-10 lg:mb-15">
             <div className="flex flex-col lg:flex-row gap-4 lg:gap-4">
@@ -74,9 +82,9 @@ const FriendDetails = () => {
                         <h2 className="text-lg sm:text-xl" >Quick Check-In</h2>
                         <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 justify-between px-0 sm:px-5"> 
 
-                            <button className="btn btn-sm lg:btn-md p-4 sm:p-6 lg:p-10 px-6 sm:px-10 lg:px-20 text-sm sm:text-base lg:text-2xl"><IoCallOutline /> Call</button>
-                            <button className="btn btn-sm lg:btn-md p-4 sm:p-6 lg:p-10 px-6 sm:px-10 lg:px-20 text-sm sm:text-base lg:text-2xl"><LuMessageSquareMore />Text</button>
-                            <button className="btn btn-sm lg:btn-md p-4 sm:p-6 lg:p-10 px-6 sm:px-10 lg:px-20 text-sm sm:text-base lg:text-2xl"><IoVideocamOutline />Video</button>
+                            <button className="btn btn-sm lg:btn-md p-4 sm:p-6 lg:p-10 px-6 sm:px-10 lg:px-20 text-sm sm:text-base lg:text-2xl" onClick={() => handleTimeline(expectedFriend, 'Call',new Date().toString().split(" GMT")[0])}><IoCallOutline /> Call</button>
+                            <button className="btn btn-sm lg:btn-md p-4 sm:p-6 lg:p-10 px-6 sm:px-10 lg:px-20 text-sm sm:text-base lg:text-2xl" onClick={() => handleTimeline(expectedFriend, 'Text',new Date().toString().split(" GMT")[0])}><LuMessageSquareMore />Text</button>
+                            <button className="btn btn-sm lg:btn-md p-4 sm:p-6 lg:p-10 px-6 sm:px-10 lg:px-20 text-sm sm:text-base lg:text-2xl" onClick={() => handleTimeline(expectedFriend, 'Video', new Date().toString().split(" GMT")[0])}><IoVideocamOutline />Video</button>
 
                         </div>
                     </div>

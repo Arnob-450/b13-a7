@@ -4,7 +4,7 @@ import { Link } from "react-router";
 const friendsPromise = fetch("/friendsData.json").then(res => res.json());
 const Friends = () => {
     const friends = use(friendsPromise);
-    console.log(friends);
+    // console.log(friends);
     return (
         <div className="container mx-auto px-15 py-5">
             <h1 className="text-3xl font-bold mb-6">Your Friends</h1>
