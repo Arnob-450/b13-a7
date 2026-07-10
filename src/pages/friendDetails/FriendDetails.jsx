@@ -42,8 +42,8 @@ const FriendDetails = () => {
                         <p className="text-gray-400 text-xs sm:text-sm">{expectedFriend?.email}</p>
                     </div>
                     <div className="flex flex-col gap-2 mt-4">
-                        <div className="card bg-base-100 w-full lg:w-96 shadow-sm p-4 ">
-                            <h2 className="flex text-center items-center justify-center font-semibold gap-2 text-xs sm:text-base"><HiOutlineBellSnooze />Snooze {expectedFriend?.days_since_contact} days</h2>
+                        <div className="card bg-base-100 w-full lg:w-96 shadow-sm p-6 btn ">
+                            <h2 className="flex text-center items-center justify-center font-semibold gap-2 text-xs sm:text-base"><HiOutlineBellSnooze />Snooze 2 weeks</h2>
                         </div>
                         <div className="card bg-base-100 w-full lg:w-96 shadow-sm p-6 btn">
                             <h2 className="flex text-center items-center justify-center font-semibold gap-2 text-xs sm:text-base"><FiArchive /> Archive</h2>
