@@ -15,7 +15,7 @@ const Navbar = () => {
                     <ul className="flex">
                         <li><NavLink className={({ isActive }) => `btn btn-ghost text-xs md:text-[16px] text-[#64748B]  ${isActive ? 'text-white btn-active bg-[#244D3F] ' : ''}`} to={'/'}> <RiHome2Line />Home</NavLink></li>
                         <li><NavLink className={({ isActive }) => `btn btn-ghost text-xs md:text-[16px] text-[#64748B] ${isActive ? 'text-white btn-active bg-[#244D3F] ' : ''}`} to={'/timeline'}><CiClock2 /> Timeline</NavLink></li>
-                        <li><NavLink className={({ isActive }) => `btn btn-ghost text-xs md:text-[16px] text-[#64748B]  ${isActive ? 'text-white btn-active bg-[#244D3F] ' : ''}`} to={'/page-to-read'}>
+                        <li><NavLink className={({ isActive }) => `btn btn-ghost text-xs md:text-[16px] text-[#64748B]  ${isActive ? 'text-white btn-active bg-[#244D3F] ' : ''}`} to={'/stats'}>
                            <GoGraph /> Stats</NavLink></li>
                     </ul>
                 </div>
