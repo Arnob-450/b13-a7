@@ -15,6 +15,8 @@ const Timeline = () => {
                   (friend) => friend.callType.toLowerCase() === filter.toLowerCase()
               );
 
+              console.log(timeline);
+
     return (
         <div>
             <div className="container mx-auto p-10">
@@ -56,7 +58,7 @@ const Timeline = () => {
                             <Card key={friend.id} friend={friend} />
                         ))
                     ) : (
-                        <p className="text-gray-500 text-center p-48 bg-base-100 rounded-2xl text-5xl font-semibold">
+                        <p className="text-gray-500 text-center p-8 sm:p-16 lg:p-48 bg-base-100 rounded-2xl text-xl sm:text-3xl lg:text-5xl font-semibold">
                             No timeline found 
                         </p>
                     )}

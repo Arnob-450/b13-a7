@@ -10,8 +10,8 @@ const Card = ({ friend }) => {
                 <div>
                     {
                         friend.callType === 'Call' && <img src={call} alt="" /> ||
-                        friend.callType === 'Video' && <img src={text} alt="" /> ||
-                        friend.callType === 'Text' && <img src={video} alt="" />
+                        friend.callType === 'Video' && <img src={video} alt="" /> ||
+                        friend.callType === 'Text' && <img src={text} alt="" />
                     }
                 </div>
                 <div className="flex flex-col gap-1">
